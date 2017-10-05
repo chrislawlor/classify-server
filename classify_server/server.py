@@ -2,9 +2,6 @@ import argparse
 import asyncio
 import configparser
 import logging
-import queue
-import sys
-from logging.handlers import QueueHandler, QueueListener
 from pathlib import Path
 
 import jinja2
