@@ -18,6 +18,10 @@ class ProviderException(Exception):
     pass
 
 
+class InvalidQueryException(Exception):
+    pass
+
+
 def get_foursquare_url(endpoint, **params):
     """
     Given an andpoint, and query string parameters as
@@ -40,6 +44,7 @@ async def make_request(client, url):
     async with client.get(url) as resp:
         if resp.status == 200:
             data = await resp.json()
+            logging.debug(data)
             if 'intent=match' in url:
                 if not data['response']['venues']:
                     logging.debug("No match returned")
@@ -72,7 +77,7 @@ async def get_foursquare_category(client, row):
         ll = f"{row['lat']},{row['lon']}"
         query = row['name']
     except KeyError:
-        raise ProviderException("Query must include 'lat', 'lon', and 'name' parameters")
+        raise InvalidQueryException("Query must include 'lat', 'lon', and 'name' parameters")
     match_venue = None
     checkin_venue = None
     category = None
@@ -88,7 +93,7 @@ async def get_foursquare_category(client, row):
     match_url = get_foursquare_url('/venues/search', intent='match',
                                    query=query, ll=ll, radius=50)
     match_resp = await make_request(client, match_url)
-    print(match_resp)
+    logger.debug(match_resp)
 
     if match_resp['venues']:
         try:
