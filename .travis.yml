@@ -4,5 +4,5 @@ python:
 
 install: "make ci"
 
-script: "make test"
+script: "make runtests"
 after_success: "coveralls"
