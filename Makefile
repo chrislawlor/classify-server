@@ -9,3 +9,7 @@ check:
 
 shell:
 	pipenv run ipython
+
+ci:
+	pip install pipenv
+	pipenv install --dev

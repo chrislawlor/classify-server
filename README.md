@@ -8,6 +8,11 @@ This is an attempt to learn asyncio / aiohttp, by building something at least
 slightly useful
 
 
+## Consuming the API
+
+[View the online documentation](https://location-classify-server.restlet.io/)
+
+
 ## Getting Started
 
 1. Get your Foursquare API credentials at https://foursquare.com/developers/apps
