@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/chrislawlor/classify-server.svg?branch=master)](https://travis-ci.org/chrislawlor/classify-server)
+
 # Location Classifier Server
 
 A small microservice for categorizing place data. Given a location name, and
