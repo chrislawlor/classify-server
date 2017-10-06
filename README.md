@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/chrislawlor/classify-server.svg?branch=master)](https://travis-ci.org/chrislawlor/classify-server)
+[![Build Status](https://travis-ci.org/chrislawlor/classify-server.svg?branch=master)](https://travis-ci.org/chrislawlor/classify-server) [![Coverage Status](https://coveralls.io/repos/github/chrislawlor/classify-server/badge.svg?branch=master)](https://coveralls.io/github/chrislawlor/classify-server?branch=master)
 
 # Location Classifier Server
 
