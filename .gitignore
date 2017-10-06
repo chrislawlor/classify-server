@@ -1,5 +1,8 @@
 .env
 .cache
 .vscode
+.coverage
 __pycache__
 classify_server/config/local.ini
+htmlcov
+
