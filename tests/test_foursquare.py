@@ -28,4 +28,4 @@ async def test_make_request_null_response():
     test_data = {'error': 'testing error'}
     client = MockClient(test_data, response_status=400)
     resp = await foursquare.make_request(client, 'url')
-    assert resp == None
+    assert resp is None
