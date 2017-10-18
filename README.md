@@ -44,7 +44,7 @@ Most development tasks have a shortcut command in the Makefile. Run the tests
 with
 
 ```
-make tests
+make runtests
 ```
 
 
